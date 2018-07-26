@@ -24,7 +24,7 @@ end
   end
 
 def update
-    @attraction = Attraction.create(attraction_params(params))
+    @attraction = Attraction.update(attraction_params(params))
     redirect_to attraction_path(@attraction)
 end
 
