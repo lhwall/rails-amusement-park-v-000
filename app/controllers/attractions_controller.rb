@@ -24,7 +24,8 @@ end
   end
 
 def update
-    @attraction = Attraction.update(attraction_params(params))
+    @attraction = Attraction.find(params[:id])
+    update(attraction_params(params))
     byebug
     redirect_to attraction_path(@attraction)
 end
